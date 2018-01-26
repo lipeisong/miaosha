@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql:///miaosha?characterEncoding=utf-8&useSSL=false
+  resources:
+    chain:
+      html-application-cache: true
+      gzipped: true
+      enabled: true
+    static-locations: classpath:/static/
+    cache-period: 3600
+mybatis:
+  type-aliases-package: com.itheima.miaosha.entity
+  configuration:
+    map-underscore-to-camel-case: true
+  mapperLocations: classpath:com/itheima/miaosha/dao/*.xml
